@@ -25,6 +25,7 @@ func main() {
     httpServer.StartEchoServer(func(srv *echo.Echo) {
         srv.POST("/api/order_list", app.OrderList) //订单列表
         srv.POST("/api/submit_order", app.SubmitOrder) //提交订单
+        srv.POST("/api/search_order", app.SearchOrder) //查询订单
 
         //admin
         srv.POST("/api/complete_order", app.CompleteOrder) //完成订单

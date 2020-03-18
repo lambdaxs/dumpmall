@@ -81,6 +81,20 @@ func SubmitOrder(c echo.Context) error {
     return OutputData(c, 0, true)
 }
 
+//查询订单
+func SearchOrder(c echo.Context) error {
+    reqModel := new(struct{
+        Aid int64 `json:"aid" form:"aid"`
+        Phone string `json:"phone" form:"phone"`
+    })
+    if err := c.Bind(reqModel);err != nil {
+        return OutputError(c, 1, fmt.Errorf("请求参数错误:%s", err.Error()))
+    }
+    list := make([]Order, 0)
+    DB.Table("order").Where("aid = ? AND phone = ?", reqModel.Aid, reqModel.Phone).Find(&list)
+    return OutputData(c, 0, list)
+}
+
 //完成订单
 func CompleteOrder(c echo.Context) error  {
     reqModel := new(struct{
@@ -152,7 +166,7 @@ func ShareOrderText(c echo.Context) error {
 //订单过期任务
 func ClearTask() {
     list := make([]Order, 0)
-    DB.Table("order").Find(&list)
+    DB.Table("order").Where("status = ?", "已完成").Find(&list)
 
     now := time.Now().Unix()
     for _,item := range list {
