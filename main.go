@@ -9,9 +9,11 @@ import (
 
 
 func main() {
+    app.Init()
+
     httpServer := server.HttpServer{
         Host:        "127.0.0.1",
-        Port:        9001,
+        Port:        5001,
     }
 
     //清理任务
@@ -32,5 +34,8 @@ func main() {
         srv.POST("/api/item_list", app.ItemList) //商品列表
         srv.POST("/api/item_update", app.ItemUpdate) //编辑商品
         srv.POST("/api/share_order_text", app.ShareOrderText) //分享订单列表
+
+        srv.GET("/wechat_group", app.WechatGroupShow) //展示群二维码
+        srv.POST("/api/wechat_group_update", app.WechatGroupUpdate) //更新群二维码
     })
 }

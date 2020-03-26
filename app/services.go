@@ -2,15 +2,16 @@ package app
 
 import (
     "fmt"
-    "github.com/labstack/echo"
     "github.com/jinzhu/gorm"
+    "github.com/labstack/echo"
     "github.com/lambdaxs/go-server/driver/mysql_client"
+    "io/ioutil"
     "time"
 )
 
 var DB *gorm.DB
 
-func init() {
+func Init() {
     sqlConf := mysql_client.MysqlDB{
         DSN:          "root:123456@tcp(127.0.0.1:3306)/mall?charset=utf8&parseTime=True&loc=Local",
         Log:          true,
@@ -20,7 +21,36 @@ func init() {
         panic(err)
     }
     DB = db
+}
 
+
+//二维码群号更新
+func WechatGroupUpdate(c echo.Context) error {
+    file,err := c.FormFile("image")
+    if err != nil {
+        return OutputError(c, 1, fmt.Errorf("no image "+err.Error()))
+    }
+    filePath := fmt.Sprintf("./app/res/group.jpg")
+    fileData,err := file.Open()
+    if err != nil {
+        return OutputError(c, 1, fmt.Errorf("no image data "+err.Error()))
+    }
+    defer fileData.Close()
+
+    buf,err := ioutil.ReadAll(fileData)
+    if err != nil {
+        return OutputError(c, 1, fmt.Errorf("no image data read "+err.Error()))
+    }
+    if writeErr := ioutil.WriteFile(filePath, buf, 0644);writeErr != nil {
+        return OutputError(c, 1, fmt.Errorf("no image data write "+writeErr.Error()))
+    }
+    return OutputData(c, 0, "success")
+}
+
+//二维码群号展示
+func WechatGroupShow(c echo.Context) error {
+    filePath := fmt.Sprintf("./app/res/group.jpg")
+    return c.File(filePath);
 }
 
 //订单列表
