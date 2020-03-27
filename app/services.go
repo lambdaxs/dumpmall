@@ -63,7 +63,7 @@ func WecahtTpl(c echo.Context) error {
     <title>{{.Title}}</title>
   </head>
   <body>
-    <div>
+    <div align="center">
         <img src="{{.Src}}">
     </div>
   </body>
