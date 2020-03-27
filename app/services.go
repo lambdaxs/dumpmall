@@ -30,7 +30,7 @@ func WechatGroupUpdate(c echo.Context) error {
     if err != nil {
         return OutputError(c, 1, fmt.Errorf("no image "+err.Error()))
     }
-    filePath := fmt.Sprintf("./app/res/group.jpg")
+    filePath := fmt.Sprintf("/root/res/dump_server/group.jpg")
     fileData,err := file.Open()
     if err != nil {
         return OutputError(c, 1, fmt.Errorf("no image data "+err.Error()))
@@ -49,7 +49,7 @@ func WechatGroupUpdate(c echo.Context) error {
 
 //二维码群号展示
 func WechatGroupShow(c echo.Context) error {
-    filePath := fmt.Sprintf("./app/res/group.jpg")
+    filePath := fmt.Sprintf("/root/res/dump_server/group.jpg")
     return c.File(filePath);
 }
 

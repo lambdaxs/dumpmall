@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b426c8f-b12f-4d70-81f0-55a5f5dddef8" name="Default Changelist" comment="" />
+    <list default="true" id="5b426c8f-b12f-4d70-81f0-55a5f5dddef8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +40,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -47,6 +52,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="583" y="216" key="#HTTP_Proxy" timestamp="1585239864107">
+      <screen x="46" y="23" width="1874" height="1057" />
+    </state>
+    <state x="583" y="216" key="#HTTP_Proxy/46.23.1874.1057@46.23.1874.1057" timestamp="1585239864107" />
+    <state x="492" y="190" key="SettingsEditor" timestamp="1585240062312">
+      <screen x="46" y="23" width="1874" height="1057" />
+    </state>
+    <state x="492" y="190" key="SettingsEditor/46.23.1874.1057@46.23.1874.1057" timestamp="1585240062312" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1584425730624">
       <screen x="46" y="23" width="1874" height="1057" />
     </state>
