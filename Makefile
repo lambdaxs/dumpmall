@@ -9,7 +9,7 @@ build:main.go
 		go build -o dump_server
 
 move:
-		mv dump_server /root/servers/ && mv ./app/res/* /root/res/dump_server/
+		mv dump_server /root/servers/
 
 restart:
 		supervisorctl restart dump_server
