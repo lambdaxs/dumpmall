@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b426c8f-b12f-4d70-81f0-55a5f5dddef8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/res/group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +57,21 @@
       <screen x="46" y="23" width="1874" height="1057" />
     </state>
     <state x="583" y="216" key="#HTTP_Proxy/46.23.1874.1057@46.23.1874.1057" timestamp="1585239864107" />
+    <state x="731" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585269873545">
+      <screen x="46" y="23" width="1874" height="1057" />
+    </state>
+    <state x="731" y="361" key="#com.intellij.fileTypes.FileTypeChooser/46.23.1874.1057@46.23.1874.1057" timestamp="1585269873545" />
     <state x="492" y="190" key="SettingsEditor" timestamp="1585240062312">
       <screen x="46" y="23" width="1874" height="1057" />
     </state>
     <state x="492" y="190" key="SettingsEditor/46.23.1874.1057@46.23.1874.1057" timestamp="1585240062312" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1584425730624">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585270508335">
       <screen x="46" y="23" width="1874" height="1057" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/46.23.1874.1057@46.23.1874.1057" timestamp="1584425730624" />
+    <state width="500" height="445" key="SwitcherDM/46.23.1874.1057@46.23.1874.1057" timestamp="1585270508335" />
+    <state x="663" y="308" width="639" height="486" key="find.popup" timestamp="1585269692188">
+      <screen x="46" y="23" width="1874" height="1057" />
+    </state>
+    <state x="663" y="308" width="639" height="486" key="find.popup/46.23.1874.1057@46.23.1874.1057" timestamp="1585269692188" />
   </component>
 </project>

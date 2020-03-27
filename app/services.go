@@ -1,12 +1,15 @@
 package app
 
 import (
+    "bytes"
     "fmt"
     "github.com/jinzhu/gorm"
     "github.com/labstack/echo"
     "github.com/lambdaxs/go-server/driver/mysql_client"
     "io/ioutil"
+    "os"
     "time"
+    "html/template"
 )
 
 var DB *gorm.DB
@@ -51,6 +54,38 @@ func WechatGroupUpdate(c echo.Context) error {
 func WechatGroupShow(c echo.Context) error {
     filePath := fmt.Sprintf("/root/res/dump_server/group.jpg")
     return c.File(filePath);
+}
+
+func WecahtTpl(c echo.Context) error {
+    tpl := `<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    <div>
+        <img src="{{.Src}}">
+    </div>
+  </body>
+</html>
+`
+    t, err := template.New("webpage").Parse(tpl)
+    if err != nil {
+        return OutputError(c, 1, err)
+    }
+    data := struct {
+        Title string
+        Src string
+    }{
+        Title: "长按识别二维码进群",
+        Src:"/wechat_group_img",
+    }
+    buf := bytes.NewBuffer(nil)
+    if err := t.Execute(buf, data);err != nil {
+        return OutputError(c, 1, err)
+    }
+    return c.HTML(200, buf.String())
 }
 
 //订单列表

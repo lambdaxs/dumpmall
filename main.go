@@ -35,7 +35,8 @@ func main() {
         srv.POST("/api/item_update", app.ItemUpdate) //编辑商品
         srv.POST("/api/share_order_text", app.ShareOrderText) //分享订单列表
 
-        srv.GET("/wechat_group", app.WechatGroupShow) //展示群二维码
+        srv.GET("/wechat_group_img", app.WechatGroupShow) //展示群二维码
+        srv.GET("/wechat_group", app.WecahtTpl) //展示群二维码
         srv.POST("/api/wechat_group_update", app.WechatGroupUpdate) //更新群二维码
     })
 }
