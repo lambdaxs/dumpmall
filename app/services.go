@@ -7,7 +7,6 @@ import (
     "github.com/labstack/echo"
     "github.com/lambdaxs/go-server/driver/mysql_client"
     "io/ioutil"
-    "os"
     "time"
     "html/template"
 )
